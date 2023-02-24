@@ -17,6 +17,8 @@ const OpenCamera = NativeModules.OpenCamera
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return OpenCamera.multiply(a, b);
+export function openCamera() {
+  return OpenCamera.openCamera()
+    .then((result: boolean) => console.log(result))
+    .catch((error: string) => console.error(error));
 }
