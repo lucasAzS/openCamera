@@ -11,11 +11,11 @@ npm install open-camera
 ## Usage
 
 ```js
-import { multiply } from 'open-camera';
+import { openCamera } from 'open-camera';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await openCamera();
 ```
 
 ## Contributing
