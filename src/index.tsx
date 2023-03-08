@@ -17,8 +17,16 @@ const OpenCamera = NativeModules.OpenCamera
       }
     );
 
+export interface Bundle {
+  text: string;
+}
+
 export function openCamera() {
   return OpenCamera.openCamera()
     .then((result: boolean) => console.log(result))
     .catch((error: string) => console.error(error));
+}
+
+export function openAndLog(bundle: Bundle) {
+  return OpenCamera.openAndLog(bundle);
 }
